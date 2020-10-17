@@ -30,4 +30,9 @@ public class BooksController {
     public void deleteBooks(@PathVariable Long id) {
         booksRepository.deleteById(id);
     }
+
+    @PutMapping("/rest/books/{id}")
+    public BooksEntity updateBooks(@PathVariable Long id, @RequestBody BooksEntity booksEntity) {
+        return booksRepository.saveAndFlush(booksEntity.setId(id));
+    }
 }
