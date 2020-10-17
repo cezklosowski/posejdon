@@ -31,4 +31,6 @@ public class PostDto {
     public String getText() {
         return text;
     }
+
 }
+

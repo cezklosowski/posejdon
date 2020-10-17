@@ -20,11 +20,11 @@ public class PostMemoryStorageService {
     public Optional<PostDto> getPost(String uuid) {
         return STORAGE
                 .stream()
-                .filter(post -> post.getUuid().equalsIgnoreCase(uuid))
-                .findFirst();
+                .filter(post -> post.getUuid().equalsIgnoreCase(uuid)).findFirst();
     }
 
-    public static List<PostDto> getPosts() {
+
+    public List<PostDto> getPosts() {
         return STORAGE;
     }
 
